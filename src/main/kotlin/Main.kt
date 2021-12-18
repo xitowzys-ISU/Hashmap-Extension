@@ -22,7 +22,7 @@ fun main() {
     println(map.iloc[8])
 
     println(map.ploc[">= 1"])
-    println(map.ploc["<= 3"])
+    println(map.ploc["< 3"])
     println(map.ploc[">0, >0"])
     println(map.ploc[">= 10, >0"])
     println(map.ploc["<5, >=5, >=3"])
