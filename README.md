@@ -1,6 +1,6 @@
 # Расширение для HashMap
 
-Разработать класс расширение для HashMap(Kotlin, Rust) или dict(Python)  для организации дополнительных способов
+Разработать класс расширение для HashMap(Kotlin, Rust) или dict(Python) для организации дополнительных способов
 получения элементов.
 
 Первый способ доступа: доступ по номеру ключа, ключи должны быть отсортированы(метод toSortedSet)
@@ -55,7 +55,7 @@ println(map.ploc["<5, >=5, >=3"]) // >>> {(1, 5, 3)=400}
 
 Для второго доступа:
 
-* ​Для условий используются символы: <. >, = и их комбинации, для не равно используется комбинация <>
+* Для условий используются символы: <. >, = и их комбинации, для не равно используется комбинация <>
 * В условии может быть любое количество пробелов
 * В условии используются только целые и вещественные числа
 * В качестве разделителя могут выступать любые символы, кроме символов условий и чисел
@@ -65,8 +65,24 @@ println(map.ploc["<5, >=5, >=3"]) // >>> {(1, 5, 3)=400}
 
 Общие требования:
 
-* ​Дополнительные способы должны быть доступны через поля iloc и ploc
+* Дополнительные способы должны быть доступны через поля iloc и ploc
 * Должно быть определено исключение для неверно заданных условий
 * Должны быть написаны тесты для проверки всего кода
 * Код может быть реализовано на одном из языков: Kotlin, Rust или Python.
+
+## Демонстрация работы:
+
+| Проверка iloc | 
+| ----------- |
+| ![](https://gitlab.com/ISU-Applied-Computer-Science/5th-semester/theory-and-practice-of-programming-languages/Hashmap-extension/-/raw/main/raw/demo_1.png?inline=false) | 
+| ![](https://gitlab.com/ISU-Applied-Computer-Science/5th-semester/theory-and-practice-of-programming-languages/Hashmap-extension/-/raw/main/raw/demo_2.png?inline=false) | 
+
+| Проверка ploc | 
+| ----------- |
+| ![](https://gitlab.com/ISU-Applied-Computer-Science/5th-semester/theory-and-practice-of-programming-languages/Hashmap-extension/-/raw/main/raw/demo_3.png?inline=false) | 
+| ![](https://gitlab.com/ISU-Applied-Computer-Science/5th-semester/theory-and-practice-of-programming-languages/Hashmap-extension/-/raw/main/raw/demo_4.png?inline=false) |
+
+| Coverage | 
+| ----------- |
+| ![](https://gitlab.com/ISU-Applied-Computer-Science/5th-semester/theory-and-practice-of-programming-languages/Hashmap-extension/-/raw/main/raw/demo_5.png?inline=false) |  
 
