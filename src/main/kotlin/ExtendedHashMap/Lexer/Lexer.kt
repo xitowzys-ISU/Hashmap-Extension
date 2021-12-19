@@ -6,7 +6,7 @@ import ExtendedHashMap.Lexer.Token.Token
 
 class Lexer(private val text: String) {
     private var pos: Int = 0
-    private var currentChar: Char? = text[pos]
+    private var currentChar: Char? = if (text.isEmpty()) null else text[pos]
 
     private fun advance() {
         pos++
@@ -32,7 +32,7 @@ class Lexer(private val text: String) {
         return result.toInt()
     }
 
-    fun getNextToken(): Token? {
+    fun getNextToken(): Token {
         while (currentChar != null) {
 
             if (currentChar == '>' && peek() == '=') {
@@ -47,6 +47,12 @@ class Lexer(private val text: String) {
                 return Token(ComparisonOperators.NOT_EQUAL, null)
             }
 
+            if (currentChar == '<' && peek() == '=') {
+                advance()
+                advance()
+                return Token(ComparisonOperators.LESS_EQUAL, null)
+            }
+
             if (currentChar == '>') {
                 advance()
                 return Token(ComparisonOperators.OVER, null)
@@ -55,11 +61,6 @@ class Lexer(private val text: String) {
             if (currentChar == '<') {
                 advance()
                 return Token(ComparisonOperators.LESS, null)
-            }
-
-            if (currentChar == '<' && peek() == '=') {
-                advance()
-                return Token(ComparisonOperators.LESS_EQUAL, null)
             }
 
             if (currentChar == '=') {
@@ -75,8 +76,6 @@ class Lexer(private val text: String) {
                 skipWhitespace()
                 continue
             }
-
-            return null
         }
 
         return Token(General.EOS, null)

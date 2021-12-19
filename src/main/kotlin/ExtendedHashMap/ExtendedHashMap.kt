@@ -28,7 +28,7 @@ class ExtendedHashMap : HashMap<String, Int>() {
         }
     }
 
-    fun ploc(condition: String): HashMap<String, Int> {
+    private fun ploc(condition: String): HashMap<String, Int> {
         val conditions: List<String> = condition.split(",").map { it.trim() }
         val result = ExtendedHashMap()
 
@@ -50,19 +50,15 @@ class ExtendedHashMap : HashMap<String, Int>() {
     private fun parse(key: String, condition: String): Boolean {
         val lexer = Lexer(condition)
 
-        val op: ITokenType? = lexer.getNextToken()?.type
+        val op: ITokenType = lexer.getNextToken().type
 
-        val right: Int? = lexer.getNextToken()?.value
+        val right: Int? = lexer.getNextToken().value
 
-        if (op == null)
-            throw ExtendedHashMapException("Wrong operator")
-        else if (op::class.java.name != ComparisonOperators::class.java.name)
+        if (op::class.java.name != ComparisonOperators::class.java.name)
             throw ExtendedHashMapException("Wrong operator")
 
 
-        if (right == null)
-            throw ExtendedHashMapException("Invalid number")
-        else if (op::class.java.name != ComparisonOperators::class.java.name)
+        if (right == null || op::class.java.name != ComparisonOperators::class.java.name)
             throw ExtendedHashMapException("Invalid number")
 
         val left = if (key.intOrString()) key.toInt() else return false
