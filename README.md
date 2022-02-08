@@ -74,15 +74,15 @@ println(map.ploc["<5, >=5, >=3"]) // >>> {(1, 5, 3)=400}
 
 | Проверка iloc | 
 | ----------- |
-| ![](https://gitlab.com/ISU-Applied-Computer-Science/5th-semester/theory-and-practice-of-programming-languages/Hashmap-extension/-/raw/main/raw/demo_1.png?inline=false) | 
-| ![](https://gitlab.com/ISU-Applied-Computer-Science/5th-semester/theory-and-practice-of-programming-languages/Hashmap-extension/-/raw/main/raw/demo_2.png?inline=false) | 
+| ![](/raw/demo_1.png) | 
+| ![](/raw/demo_2.png) | 
 
 | Проверка ploc | 
 | ----------- |
-| ![](https://gitlab.com/ISU-Applied-Computer-Science/5th-semester/theory-and-practice-of-programming-languages/Hashmap-extension/-/raw/main/raw/demo_3.png?inline=false) | 
-| ![](https://gitlab.com/ISU-Applied-Computer-Science/5th-semester/theory-and-practice-of-programming-languages/Hashmap-extension/-/raw/main/raw/demo_4.png?inline=false) |
+| ![](/raw/demo_3.png) | 
+| ![](/raw/demo_4.png) |
 
 | Coverage | 
 | ----------- |
-| ![](https://gitlab.com/ISU-Applied-Computer-Science/5th-semester/theory-and-practice-of-programming-languages/Hashmap-extension/-/raw/main/raw/demo_5.png?inline=false) |  
+| ![](/raw/demo_5.png) |  
 
